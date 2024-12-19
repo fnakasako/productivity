@@ -1,0 +1,24 @@
+app:
+  name: TimeTracker
+  version: "1.0.0"
+
+monitoring:
+  inactivity_threshold: 300  # seconds
+  polling_interval: 1.0      # seconds
+  input_threshold: 2.0       # seconds between inputs to consider as active
+
+storage:
+  type: "json"              # json or sqlite
+  path: "~/.timetracker"    # base path for storage
+  filename: "activities.json"
+
+ui:
+  window_title: "TimeTracker"
+  window_size: "500x400"
+  theme: "system"           # system, light, or dark
+  recent_activities_count: 10
+
+reporting:
+  daily_report_time: "23:59"
+  report_format: "text"     # text or markdown
+  group_by_application: true
